@@ -3,4 +3,4 @@
 #
 ![Code-quiz](./screencap.png)
 #
-[deployed-app](https://nparson88.github.io/Code-quiz/)
+[deployed-app](https://nparson88.github.io/Code-Quiz/)

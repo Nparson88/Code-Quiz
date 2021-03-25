@@ -40,7 +40,7 @@ var quizQuestions = [
 ];
 // event listener to check for start button
 quizStartEl.addEventListener("click", function () {
-  // if statement to start the quiz and countdown the timer 
+    // if statement to start the quiz and countdown the timer 
     if (timeInterval === 0) {
         timeInterval = setInterval(function () {
             timeLeft--;
@@ -57,17 +57,17 @@ quizStartEl.addEventListener("click", function () {
 });
 // function to render the first question 
 function render(questionIndex) {
-   ulEl.innerHTML = "";  questionsEl.innerHTML = "";
-   
+    ulEl.innerHTML = ""; questionsEl.innerHTML = "";
+
     for (var i = 0; i < quizQuestions.length; i++) {
-     
+
         var chosenQuestion = quizQuestions[questionIndex].prompt;
         var answerChoices = quizQuestions[questionIndex].choices;
         questionsEl.textContent = chosenQuestion;
     }
-  //function that displays the answers given
+    //function that displays the answers given
     answerChoices.forEach(function (newItem) {
-        
+
         var newList = document.createElement("li");
         newList.textContent = newItem;
         questionsEl.appendChild(ulEl);
@@ -106,12 +106,12 @@ function quizEnd() {
     questionsEl.innerHTML = "";
     timerEl.innerHTML = "";
 
-// creates a new header after quiz is over 
+    // creates a new header after quiz is over 
     var newH1 = document.createElement("h1");
     newH1.setAttribute("id", "newH1");
     newH1.textContent = "How did you do?"
     questionsEl.appendChild(newH1);
-// new p tage to display score 
+    // new p tage to display score 
     if (timeLeft >= 0) {
         var newPar = document.createElement("p");
         clearInterval(timeInterval);
@@ -120,17 +120,17 @@ function quizEnd() {
         questionsEl.appendChild(newPar);
     }
 
-// label for submitting initials
+    // label for submitting initials
     var label = document.createElement("label");
     label.setAttribute("id", "label");
     label.textContent = "Enter your initials: ";
     questionsEl.appendChild(label);
-// input created to enter initials 
+    // input created to enter initials 
     var nameInput = document.createElement("input");
     nameInput.setAttribute("type", "text");
     nameInput.textContent = "";
     questionsEl.appendChild(nameInput);
-// submit buttun to store score and name 
+    // submit buttun to store score and name 
     var submitBtn = document.createElement("button");
     submitBtn.setAttribute("type", "submit");
     submitBtn.setAttribute("id", "submit");
@@ -155,7 +155,7 @@ function quizEnd() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-           //goes to highscore.html
+            //goes to highscore.html
             window.location.replace("./highScores.html");
         }
     });

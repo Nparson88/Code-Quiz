@@ -2,7 +2,9 @@
 [github](https://github.com/Nparson88/Code-quiz)
 #
 ![Code-quiz](./screencap.png)
+#
 ![Code-quiz](./quizImg3.png)
+#
 ![Code-quiz](./quizImg2.png)
 #
 [deployed-app](https://nparson88.github.io/Code-Quiz/)
